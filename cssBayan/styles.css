@@ -86,3 +86,42 @@ h1 {
 	width: 0;
 	transition: 0.5s;
 }
+
+@media (min-width: 820px) {
+	html {
+		font-size: 25px;
+	}
+	.wrapper {
+		width: 80%;
+	}
+	.bayan__radio:checked ~ .bayan__label .bayan__image,
+	.bayan__label:hover .bayan__image {
+		width: 60%;
+	}
+
+	.bayan:hover .expand-icon {
+		opacity: 1;
+		transition: 0.5s;
+	}
+
+	.bayan:hover .bayan__title {
+		color: #000;
+	}
+    
+    .bayan__label:hover .bayan__image{
+        width: 60%;
+        
+    }
+    .bayan__label:hover .expand-icon{
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 1920px) {
+	html {
+		font-size: 35px;
+	}
+	.wrapper {
+		width: 50%;
+	}
+}
