@@ -1,6 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: inter;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 1rem;
+	width: 100%;
+}
+
+h1 {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+.bayan {
+	list-style-type: none;
+}
+
+.bayan__radio {
+	display: none;
+}
+
+.bayan__label {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 1rem 0;
+	border-top: 0.1rem solid #888;
+}
+.bayan__title {
+	margin-right: auto;
+	color: rgb(185, 7, 7);
+	font-size: 1.2rem;
+	transition: 0.5s;
+}
+
+.bayan__radio:checked ~ .bayan__label .bayan__title {
+	color: #000;
+}
+
+.bayan__radio:active ~ .bayan__label .bayan__title {
+	color: rgb(185, 7, 7);
+	transition: 0.5s;
+}
+
+.bayan__radio:active ~ .bayan__label .bayan__image {
+	opacity: 0.7;
+}
+
+.bayan__radio:checked ~ .bayan__label .bayan__image {
+	width: 100%;
+	transition: 0.5s;
+}
+
+.bayan__radio:checked ~ .bayan__label .expand-icon
+ {
+	transform: rotate(180deg);
+	transition: 0.5s;
+}
+
+.bayan__radio:checked ~ .bayan__image {
+	width: 100%;
+	transition: 0.5s;
+}
+
+.expand-icon {
+	transition: 0.5s;
+	opacity: 0;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.bayan__image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.bayan__image {
+	width: 0;
+	transition: 0.5s;
 }
